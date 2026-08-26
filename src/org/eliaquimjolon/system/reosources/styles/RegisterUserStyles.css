@@ -1,0 +1,28 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 25 ago 2026, 17:13:41
+    Author     : informatica
+*/
+
+.form-register{
+    -fx-background-color: skyblue;
+    
+}
+
+.form-register Label{
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    /* -fx-font-family: "familia"*/
+    
+}
+
+.form-register TextField{
+    -fx-border-color : #4B3C5E;
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    
+}

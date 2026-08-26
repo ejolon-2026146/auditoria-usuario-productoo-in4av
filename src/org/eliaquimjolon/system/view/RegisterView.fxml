@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" spacing="10.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eliaquimjolon.system.controller.RegisterController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" spacing="10.0" stylesheets="@../reosources/styles/RegisterUserStyles.css" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eliaquimjolon.system.controller.RegisterController">
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
    </padding>
@@ -24,7 +23,7 @@
             <Image url="@../reosources/images/user.png" />
          </image>
       </ImageView>
-      <GridPane>
+      <GridPane styleClass="form-register">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -44,18 +43,18 @@
             <Label text="CORREO" GridPane.rowIndex="3" />
             <Label text="CONTRESEÑA" GridPane.rowIndex="4" />
             <Label text="CONFIRMAR CONTRASEÑA" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtUser" GridPane.columnIndex="1" />
+            <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtLastName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="pwdPassword" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <PasswordField fx:id="pwdConfirmPassword" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="CANCELAR" />
-            <Button mnemonicParsing="false" text="CREAR USUARIO" />
+            <Button fx:id="btnCancel" mnemonicParsing="false" onMouseClicked="#onCancelRegister" text="CANCELAR" />
+            <Button fx:id="btnCreateUser" mnemonicParsing="false" onMouseClicked="#onRegisterUser" text="CREAR USUARIO" />
          </children>
       </HBox>
    </children>
