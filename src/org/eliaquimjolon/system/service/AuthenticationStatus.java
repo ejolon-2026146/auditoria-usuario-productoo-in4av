@@ -6,11 +6,11 @@ package org.eliaquimjolon.system.service;
 
 /**
  *
- * @author informatica
+ * @author jolon
  */
-public enum UserStatus {
-    USER_CREATED,
-    ERROR_USER_CREATE,
-    EMPTY_FIELDS,
-    USER_EXIST
+public enum AuthenticationStatus {
+    LOGIN_SUCCES,
+    NOT_EXIST_USER,
+    WRONG_PASSWORD,
+    ERROR_LOGIN
 }

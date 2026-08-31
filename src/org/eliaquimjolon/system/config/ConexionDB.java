@@ -25,7 +25,9 @@ public class ConexionDB {
            System.out.println("Erro clase no encontrada");
            
        }catch(SQLException sQLException){
-           System.out.println("Error de conexion a db");
+            System.out.println("Error de conexion a db: " + sQLException.getMessage());
+            sQLException.printStackTrace(); // Esto te dirá si es problema de contraseña, de tabla o de base de datos inexistente
+        
            
        }catch(Exception e){
             System.out.println("Error padre " + e.getMessage());

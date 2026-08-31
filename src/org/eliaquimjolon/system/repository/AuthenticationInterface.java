@@ -10,7 +10,6 @@ import org.eliaquimjolon.system.model.User;
  *
  * @author jolon
  */
-public interface UserInterface {
-    void create (User user);
-    User findByUserOrEmail(String userOrEmail);
+public interface AuthenticationInterface {
+    User login(String email, String password);
 }

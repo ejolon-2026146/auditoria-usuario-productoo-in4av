@@ -48,6 +48,10 @@ public class ViewFactory {
                                 .getStagePrincipal().setResizable(false);
                         scene = loadFileFXML("RegisterView.fxml",350,400);
                     }
+                case "dashboard" -> {
+                        SceneManager.getInstanciaSceneManager().getStagePrincipal().setTitle("Dashboard");
+                        scene = loadFileFXML("DashboardView.fxml",600,400);
+                    }
                 
                     default -> scene = loadFileFXML("LoginView.fxml",350,400);
                
@@ -69,6 +73,10 @@ public class ViewFactory {
     
     public void viewLogin(){
         loadScene("login");
+    }
+    
+    public void viewDashboard(){
+        loadScene("dashboard");
     }
             
             
